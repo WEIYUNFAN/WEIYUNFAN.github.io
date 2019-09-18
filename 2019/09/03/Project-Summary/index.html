@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content>
+  <meta name="author" content="Yunfan Wei">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="MOSFET">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="Yunfan Wei&#39;s blog">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.com">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Yunfan Wei's blog</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">MOSFET</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/WEIYUNFAN/WEIYUNFAN.github.io">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Yunfan Wei</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2019-09-03</span>
+            <span class="time">10:51:30</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="MOSFET—Metal-Oxide-Semiconductor-Field-Effect-Transistor"><a href="#MOSFET—Metal-Oxide-Semiconductor-Field-Effect-Transistor" class="headerlink" title="MOSFET—Metal-Oxide-Semiconductor Field-Effect Transistor"></a><center>MOSFET—Metal-Oxide-Semiconductor Field-Effect Transistor</center></h2><p>By ——Yunfan W</p>
+<p><strong><center>Goals</center></strong></p>
+<p>Simulate MOSFET</p>
+<p>1.Explore under what condition could the MOS transistors work well.</p>
+<p>2.Explore how the different values of voltage affect the operation of MOSFET.</p>
+<p><strong><center>Method</center></strong></p>
+<p>COMSOL</p>
+<p>1.Define different parameters</p>
+<p>2.Define each components in MOSFET and change physical quantities in each components to the suitable ones</p>
+<p>3.Adjust the mesh</p>
+<p>4.Use COMSOL plot the diagram and get results</p>
+<p><img src="/2019/09/03/Project-Summary/1.jpg" alt="1.jpg"></p>
+<p>If in=+,n-channel device is on, p-channel is off, out is connected to - If in=-, n-channel is off, p-channel is off, out is connected to + which means that when input is very high, the voltage out is low.</p>
+<p>While if input is very low (e.g. 0V), the output is quite high.</p>
+<p>— lower power consumption</p>
+<p>— symmetry of design</p>
+<p><img src="/2019/09/03/Project-Summary/2.jpg" alt="2.jpg"><br>The red part means the source and drain.</p>
+<p>The blue part means the gate</p>
+<p>The whole rectangle is the model of a MOSFET</p>
+<center>This is a process of using a simple model to
+represent the MOSFET
+</center>
+
+<p><img src="/2019/09/03/Project-Summary/3.jpg" alt="3.jpg"></p>
+<p>This is the meshing for building and operate the modeling. Each mesh means at which position we plan to calculate. The magnitude of each mesh represents the area of each position to study. For smaller meshes, the calculation is more precise.</p>
+<p><img src="/2019/09/03/Project-Summary/4.jpg" alt="4.jpg"></p>
+<p>The blue lines divide the boundary of the model, which means the area in the upper side that enclosed by the lines are the position to be calculated emphatically.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Electron concentration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hole concentration</p>
+<p><img src="/2019/09/03/Project-Summary/5.jpg" alt="5.jpg"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when V=0V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when V=4V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When V=0V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When V=4V</p>
+<p>When the gate voltage is zero, the area near the gate has few electrons and cannot be able to conduct the current, so the electron and hole concentration are both very low on the middle part.</p>
+<p>When the gate voltage is 4V, electrons are attracted to gather near the gate, the source and drain can be connected. Therefore, the electron concentration in the upper part is high.</p>
+<p>The value of concentration of electron and hole are just opposite to each other in the same position.</p>
+<center>Electric potential</center>
+
+<p><img src="/2019/09/03/Project-Summary/6.jpg" alt="6.jpg"></p>
+<p>When the gate voltage is zero, of course electrons cannot move form source to drain because the electrons cannot gather on the<br>upper side of the mono-silicon. The diffusion between source and<br>drain is not possible to happen.</p>
+<p>When the voltage is 4V, the electrons are attracted to aggregate in the gate area, which could create a conductive path as shown in the graph.</p>
+<p>This is the diagram which shows the relationship of terminal current and gate voltage.</p>
+<p><img src="/2019/09/03/Project-Summary/7.jpg" alt="7.jpg"></p>
+<p>When the gate voltage is around 1.1V, the current starts to exist. (1.1V is the value of the band gap) Only if the voltage exceed this value, the electrons can move between the bands so that the current occurs.</p>
+<p>**<center>Difficulty</center></p>
+<p>Lack of professional knowledge</p>
+<p>Since I did not get in touch with any knowledge about MOSFET. I only learnt a little about semi-conductor, but I only know about the basic knowledge. I even did not heard of COMSOL.</p>
+<p>However, my instructor recommend me a book which is called The Feynman Lectures on Physics. I read chapter one and four which is about electromagnetic and static electricity, and I found that I can understand the class better if I read some meanings of formulas before class.</p>
+<p>Also I will search in the Internet about the knowledge I do not understand such as the part about doping in semi-conductors. I saw quite a lot of simple explanations in the Internet.</p>
+<p>**<center>Conclusion</center></p>
+<p>MOSFET have advantages over other types of transistors for its greater integration density and simpler geometry. MOS transistors consist of source and drain diffusions, with a gate that controls whether the transistor is on. By applying voltage on the gate, we can help the electrons aggregate between source and drain, which enables current flows through them. For given gate voltage, increasing voltage differences between source and drain increases current from source to drain. From the modeling process, I find out that the area close to the gate has high electron concentration and low hole concentration when the voltage is 4V. Instead, when the gate voltage is 0V, this area has low electron concentration and high hole concentration, which means the electric potential in this area is lower than that with gate voltage of 4V. Moreover, from further exploration, we can see that when gate voltage is around 1.1, which is the value of the band gap, there is current in the transistor.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
